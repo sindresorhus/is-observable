@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save is-observable
+$ npm install is-observable
 ```
 
 
