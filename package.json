@@ -27,7 +27,7 @@
 		"type"
 	],
 	"dependencies": {
-		"symbol-observable": "^0.2.2"
+		"symbol-observable": "^1.0.4"
 	},
 	"devDependencies": {
 		"ava": "*",
