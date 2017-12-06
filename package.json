@@ -15,8 +15,9 @@
 	"scripts": {
 		"test": "xo && ava"
 	},
+	"main": "index.node.js",
 	"files": [
-		"index.js"
+		"index.node.js"
 	],
 	"keywords": [
 		"observable",
