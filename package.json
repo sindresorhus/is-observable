@@ -15,8 +15,11 @@
 	"scripts": {
 		"test": "xo && ava"
 	},
+	"module": "index.module.js",
+	"jsnext:main": "index.module.js",
 	"main": "index.node.js",
 	"files": [
+		"index.module.js",
 		"index.node.js"
 	],
 	"keywords": [
@@ -32,10 +35,17 @@
 	},
 	"devDependencies": {
 		"ava": "*",
+		"babel-register": "^6.26.0",
 		"most": "^1.7.2",
 		"rxjs": "^5.5.5",
 		"xo": "*",
 		"xstream": "^11.0.0",
 		"zen-observable": "^0.6.0"
+	},
+	"ava": {
+		"require": ["babel-register"]
+	},
+	"babel": {
+		"presets": ["@ava/stage-4"]
 	}
 }
