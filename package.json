@@ -15,8 +15,12 @@
 	"scripts": {
 		"test": "xo && ava"
 	},
+	"module": "index.module.js",
+	"jsnext:main": "index.module.js",
+	"main": "index.node.js",
 	"files": [
-		"index.js"
+		"index.module.js",
+		"index.node.js"
 	],
 	"keywords": [
 		"observable",
@@ -27,14 +31,26 @@
 		"type"
 	],
 	"dependencies": {
-		"symbol-observable": "^1.0.4"
+		"symbol-observable": "^1.1.0"
 	},
 	"devDependencies": {
 		"ava": "*",
+		"babel-register": "^6.26.0",
+		"indefinite-observable": "^1.0.1",
 		"most": "^1.7.2",
 		"rxjs": "^5.5.5",
 		"xo": "*",
 		"xstream": "^11.0.0",
 		"zen-observable": "^0.6.0"
+	},
+	"ava": {
+		"require": [
+			"babel-register"
+		]
+	},
+	"babel": {
+		"presets": [
+			"@ava/stage-4"
+		]
 	}
 }
