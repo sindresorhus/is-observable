@@ -1,4 +1,4 @@
 'use strict';
-const symbolObservable = require('symbol-observable').default;
+const $$observable = require('symbol-observable').default;
 
-module.exports = fn => Boolean(fn && fn[symbolObservable]);
+module.exports = value => Boolean(value && value[$$observable] && value === value[$$observable]());
