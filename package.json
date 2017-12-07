@@ -36,6 +36,7 @@
 	"devDependencies": {
 		"ava": "*",
 		"babel-register": "^6.26.0",
+		"indefinite-observable": "^1.0.1",
 		"most": "^1.7.2",
 		"rxjs": "^5.5.5",
 		"xo": "*",
@@ -43,9 +44,13 @@
 		"zen-observable": "^0.6.0"
 	},
 	"ava": {
-		"require": ["babel-register"]
+		"require": [
+			"babel-register"
+		]
 	},
 	"babel": {
-		"presets": ["@ava/stage-4"]
+		"presets": [
+			"@ava/stage-4"
+		]
 	}
 }

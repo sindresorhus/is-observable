@@ -3,6 +3,7 @@ import zenObservable from 'zen-observable';
 import Rx from 'rxjs';
 import * as most from 'most';
 import {Stream as xstream} from 'xstream';
+import {IndefiniteObservable} from 'indefinite-observable';
 
 /* eslint-disable import/extensions */
 import {isObservable as asModule} from './index.module.js';
@@ -16,6 +17,7 @@ import asCommonJS from './index.node.js';
 			t.true(isObservable(Rx.Observable.of(1)));
 			t.true(isObservable(most.of(1)));
 			t.true(isObservable(xstream.of(1)));
+			t.true(isObservable(new IndefiniteObservable(() => {})));
 			t.false(isObservable(null));
 			t.false(isObservable({foo: true}));
 			t.false(isObservable(() => {}));
