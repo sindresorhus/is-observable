@@ -1,7 +1,7 @@
 'use strict';
 const symbolObservable = require('symbol-observable').default;
 
-module.exports = function isObservable(value) {
+module.exports = function (value) {
 	return Boolean(
 		value &&
 		value[symbolObservable] &&
