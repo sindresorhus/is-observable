@@ -1,19 +1,19 @@
 import test from 'ava';
 import zenObservable from 'zen-observable';
-import Rx from 'rxjs';
+import {of as rxOf} from 'rxjs';
 import * as most from 'most';
 import {Stream as xstream} from 'xstream';
 import {IndefiniteObservable} from 'indefinite-observable';
-import m from '.';
+import isObservable from '.';
 
-test(t => {
-	t.true(m(zenObservable.of(1)));
-	t.true(m(Rx.Observable.of(1)));
-	t.true(m(most.of(1)));
-	t.true(m(xstream.of(1)));
-	t.true(m(new IndefiniteObservable(() => {})));
+test('main', t => {
+	t.true(isObservable(zenObservable.of(1)));
+	t.true(isObservable(rxOf(1)));
+	t.true(isObservable(most.of(1)));
+	t.true(isObservable(xstream.of(1)));
+	t.true(isObservable(new IndefiniteObservable(() => {})));
 
-	t.false(m(null));
-	t.false(m({foo: true}));
-	t.false(m(() => {}));
+	t.false(isObservable(undefined));
+	t.false(isObservable({foo: true}));
+	t.false(isObservable(() => {}));
 });

@@ -23,8 +23,3 @@ isObservable(Observable.of(1, 2));
 ## Related
 
 - [observable-to-promise](https://github.com/sindresorhus/observable-to-promise) - Convert an Observable to a Promise
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
