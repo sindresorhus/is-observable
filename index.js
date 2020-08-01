@@ -6,12 +6,13 @@ module.exports = value => {
 	}
 
 	// eslint-disable-next-line no-use-extend-native/no-use-extend-native
-	if (value[Symbol.observable] && value === value[Symbol.observable]()) {
-		return true;
+	if (typeof Symbol.observable === 'symbol' && typeof value[Symbol.observable] === 'function') {
+		// eslint-disable-next-line no-use-extend-native/no-use-extend-native
+		return value === value[Symbol.observable]();
 	}
 
-	if (value['@@observable'] && value === value['@@observable']()) {
-		return true;
+	if (typeof value['@@observable'] === 'function') {
+		return value === value['@@observable']();
 	}
 
 	return false;
