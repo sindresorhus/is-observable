@@ -4,10 +4,11 @@
 	"description": "Check if a value is an Observable",
 	"license": "MIT",
 	"repository": "sindresorhus/is-observable",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
 		"node": ">=8"
