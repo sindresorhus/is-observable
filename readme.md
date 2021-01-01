@@ -1,4 +1,4 @@
-# is-observable [![Build Status](https://travis-ci.com/sindresorhus/is-observable.svg?branch=master)](https://travis-ci.com/github/sindresorhus/is-observable)
+# is-observable
 
 > Check if a value is an [Observable](https://github.com/zenparsing/es-observable)
 
