@@ -4,7 +4,7 @@ import {of as rxOf} from 'rxjs';
 import * as most from 'most';
 import {Stream as xstream} from 'xstream';
 import {IndefiniteObservable} from 'indefinite-observable';
-import isObservable from '..';
+import isObservable from '../index.js';
 
 test('main', t => {
 	t.true(isObservable(zenObservable.of(1)));

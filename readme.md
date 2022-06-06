@@ -4,14 +4,14 @@
 
 ## Install
 
-```
-$ npm install is-observable
+```sh
+npm install is-observable
 ```
 
 ## Usage
 
 ```js
-const isObservable = require('is-observable');
+import isObservable from 'is-observable';
 
 isObservable(Observable.of(1, 2));
 //=> true

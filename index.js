@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = value => {
+export default function isObservable(value) {
 	if (!value) {
 		return false;
 	}
@@ -16,4 +14,4 @@ module.exports = value => {
 	}
 
 	return false;
-};
+}

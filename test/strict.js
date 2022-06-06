@@ -1,12 +1,12 @@
 import test from 'ava';
-import isObservable from '..';
+import isObservable from '../index.js';
 
 const fake1 = {'@@observable': true};
 const fake2 = {undefined: true};
 const fake3 = {
 	undefined() {
 		return this;
-	}
+	},
 };
 
 test('strict', t => {
